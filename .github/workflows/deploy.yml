@@ -18,8 +18,9 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           envs: APPLICATION_PROPERTIES
-          script_stop: true
+          # script_stop: true 이거 동작 안함. 버전 차이인듯 아래 스크립트에 set -e를 통해 같은 동작 하도록.
           script: |
+            set -e
             cd /home/ubuntu/github-action-practice
             rm -rf src/main/resources/application.yml
             git pull origin main
