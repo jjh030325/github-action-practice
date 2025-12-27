@@ -5,10 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class StartCicdApplicationTests {
-
     @Test
     void contextLoads() {
-        throw new RuntimeException("Fail!");
     }
-
 }
